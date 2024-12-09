@@ -18,7 +18,7 @@ export const goods = [
 export const App = () => {
   const [activeIndex, setActiveIndex] = useState(8);
 
-  const hendleClick = index => {
+  const handleClick = index => {
     setActiveIndex(prevIndex => (prevIndex === index ? null : index));
   };
 
@@ -58,7 +58,7 @@ export const App = () => {
                     className={
                       activeIndex === index ? 'button is-info' : 'button'
                     }
-                    onClick={() => hendleClick(index)}
+                    onClick={() => handleClick(index)}
                   >
                     {activeIndex === index ? '-' : '+'}
                   </button>
